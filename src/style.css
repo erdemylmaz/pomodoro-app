@@ -1,0 +1,142 @@
+:root {
+  --red: #f8333c;
+  --background: #f7f7f2;
+  --foreground: #46494c;
+
+  --border-radius: 70px;
+  --box-shadow: 8px 8px 13px #cbcbc6, -8px -8px 13px #ffffff;
+  --dark-box-shadow: 5px 5px 13px #3f3f3f, -3px -3px 8px #3f3f3f;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  display: grid;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  height: 100vh;
+  line-height: 1.5;
+  margin: 0;
+  place-items: center;
+  transition: 500ms;
+}
+#pomodoro {
+  text-align: center;
+}
+button:focus {
+  outline: none;
+}
+button {
+  width: 100px;
+  border-radius: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  border: none;
+  padding: 1.75rem;
+  border-radius: 25px;
+  box-shadow: var(--box-shadow);
+  transition: 500ms;
+}
+#timer-card {
+  font-size: 3.052rem;
+  transition: 500ms;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 1.75rem;
+  width: 16rem;
+  padding: 2.75rem 1.15rem;
+}
+#end {
+  color: var(--red);
+  margin-left: 2rem;
+}
+#increase {
+  margin-left: 2rem;
+}
+#increase,
+#decrease {
+  margin-top: 2.5rem;
+}
+button:active {
+  transform: translateY(2px);
+}
+#change {
+  margin-top: 2.5rem;
+  width: 224px;
+}
+#alert {
+  transition: 500ms;
+  position: absolute;
+  display: none;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+  line-height: 2rem;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+header {
+  position: absolute;
+  top: 0px;
+  line-height: 3rem;
+  width: 100%;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+header #icons {
+  text-align: right;
+  margin-right: 16px;
+}
+.darkMode {
+  background-color: #131313;
+  transition: 500ms;
+}
+.darkMode #pomodoro #container button,
+.darkMode #pomodoro #container #timer-card {
+  background-color: rgba(75, 75, 75, 0.5);
+  box-shadow: var(--dark-box-shadow);
+  color: #ffffff;
+  transition: 500ms;
+}
+.darkMode #pomodoro #container #timer-card,
+.darkMode #pomodoro #container span {
+  color: #ffffff;
+}
+.darkMode header {
+  box-shadow: var(--dark-box-shadow);
+}
+.darkMode header i {
+  color: white;
+  transform: scale(1.2);
+  transition: 500ms;
+}
+
+span:hover {
+  cursor: pointer;
+}
+i {
+  transform: scale(1.2);
+  color: black;
+  transition: 500ms;
+}
+@keyframes click {
+  0% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}

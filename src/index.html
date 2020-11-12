@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pomodoro - Çalışma Tekniği</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/fa178081cb.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header>
+      <div id="icons">
+        <span id="light" style="margin-right: 12px;"><i class="fas fa-sun" id="sun"></i></span>
+        <span id="dark"><i class="fas fa-moon" id="moon"></i></span>
+      </div>
+    </header>
+      <div id="alert">
+        <span id="message"></span>
+      </div>
+    <div id="pomodoro">
+      <div id="container">
+        <span id="mood" style="font-size: 1.5rem; margin-bottom: 8px;"></span>
+        <div id="timer-card">
+          <p id="time"></p>
+        </div>
+        <br />
+        <button id="startStop">Start</button>
+        <button id="end">End</button>
+        <br />
+        <button id="decrease">-</button>
+        <button id="increase">+</button>
+        <br />
+        <button id="change">Take a break</button>
+      </div>
+    </div>
+    <script src="App.js"></script>
+  </body>
+</html>
